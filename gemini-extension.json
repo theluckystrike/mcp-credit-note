@@ -1,0 +1,22 @@
+{
+  "name": "mcp-credit-note",
+  "version": "0.21.0",
+  "description": "MCP server for credit notes and credit memos against an invoice or standalone. Credit notes against an invoice or standalone: drafts, finalization, rendering and totals, all in integer minor units.",
+  "settings": [
+    {
+      "name": "mcp.zovo.one token",
+      "description": "A free anonymous token from https://mcp.zovo.one/mcp/token, or your Pro key. One token is one data space, and it is refreshed for another 30 days on every write.",
+      "envVar": "ZOVO_MCP_TOKEN",
+      "sensitive": true
+    }
+  ],
+  "mcpServers": {
+    "credit-note": {
+      "httpUrl": "https://mcp.zovo.one/mcp/credit-note",
+      "headers": {
+        "Authorization": "Bearer ${ZOVO_MCP_TOKEN}"
+      },
+      "description": "Credit notes against an invoice or standalone: drafts, finalization, rendering and totals, all in integer minor units."
+    }
+  }
+}
