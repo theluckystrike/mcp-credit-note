@@ -1,6 +1,6 @@
 {
   "name": "mcp-credit-note",
-  "version": "0.21.0",
+  "version": "0.22.0",
   "description": "MCP server for credit notes and credit memos against an invoice or standalone. Credit notes against an invoice or standalone: drafts, finalization, rendering and totals, all in integer minor units.",
   "settings": [
     {
