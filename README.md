@@ -45,6 +45,8 @@ Read-only mirror of [mcp-servers/servers/credit-note](https://github.com/theluck
 
 <!-- mirror-seo:end -->
 
+[![theluckystrike/mcp-credit-note MCP server](https://glama.ai/mcp/servers/theluckystrike/mcp-credit-note/badges/score.svg)](https://glama.ai/mcp/servers/theluckystrike/mcp-credit-note)
+
 **In the [official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers/io.github.theluckystrike%2Fcredit-note/versions/latest)** (`io.github.theluckystrike/credit-note`).
 Credit notes (credit memos) for freelancers and small businesses, kept the way the paperwork keeps them. Issue a credit against an invoice or standalone: the recipient, the reason (returned goods, overcharge, discount correction, service issue, other), line items with quantity, unit price and tax rate, and the currency. Every credit note starts as a draft you can revise and delete; finalizing burns the final CN-YYYY-NNNN number and freezes it, because a finalized credit note is a document the client may have seen. Render one to Markdown to paste into an email, or to a self-contained printable HTML page, and get the totals credited per currency, reason and month. Every amount is an integer number of minor units, and nothing is sent anywhere.
 
@@ -106,7 +108,7 @@ claude mcp add credit-note -- npx -y @theluckystrike/mcp-credit-note
 
 Finalizing is the metered act because that is what turns a draft into the document the client sees. Everything else is free and unlimited: a free tier that withholds the rendered document or the totals is a demo, and ten real finalized credit notes is a working year for a freelancer who credits an invoice now and then.
 
-**Get Pro:** https://mcp.zovo.one/buy/credit-note -- $19 one-time for this server, or $39 for the bundle.
+Get Pro: https://mcp.zovo.one/buy/credit-note, $19 one-time for this server, or $39 for the bundle.
 
 ## The rounding rule
 
@@ -127,3 +129,9 @@ Drafts carry a `CN-DRAFT-YYYY-NNNN` id no client sees. The final `CN-YYYY-NNNN` 
 All data stays local, in `${XDG_DATA_HOME:-~/.local/share}/mcp-servers/credit-note/`. Two files: `notes.json`, `counter.json`. Nothing is sent anywhere, there is no account, no API key and no network call in this server at all. License keys are verified offline. The Markdown and HTML renders are returned as text; this server writes no document files.
 
 Built by theluckystrike. https://github.com/theluckystrike
+
+## Use these docs as an MCP server
+
+Any MCP client (Claude, Cursor, Windsurf, VS Code) can read this repository's documentation directly via GitMCP — no install:
+
+- Docs MCP URL: https://gitmcp.io/theluckystrike/mcp-credit-note
